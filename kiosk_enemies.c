@@ -9,7 +9,7 @@ typedef struct army_paad {
 } army_paad;
 
 void ArmyAnimCode(army_paad* paad) {
-    int anim_start = *(int*)(0x807FF700);
+    int anim_start = 0x24F;
     if (paad->unk_2C) {
         paad->unk_2C -= 1;
         if (paad->unk_2C == 0) {
@@ -31,7 +31,7 @@ void ArmyCode(void) {
             0x251 (0x2B3) = Land?
             0x252 (0x2B4) = Death?
     */
-    int anim_start = *(int*)(0x807FF700);
+    int anim_start = 0x24F;
     initCharSpawnerActor();
     army_paad* paad = CurrentActorPointer_0->paad;
     int ignore = 0;
